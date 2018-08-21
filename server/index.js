@@ -1,8 +1,8 @@
 let express = require("express");
 const app = express();
 let mongoose = require("mongoose");
-mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://admin:secretpass1@ds227322.mlab.com:27322/checkpoint-1");
+mongoose.Promise =  global.Promise;
+mongoose.connect("mongodb://admin:authentic01@ds227322.mlab.com:27322/checkpoint-1");
 
 app.use(express.static('public'))
 
