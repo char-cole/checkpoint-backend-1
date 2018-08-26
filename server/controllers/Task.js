@@ -1,4 +1,4 @@
-let TaskModel = require("./models/Task");
+let TaskModel = require("../models/Task");
 
 module.exports.list = function list(req, res, next) {
   TaskModel.find({}).exec()

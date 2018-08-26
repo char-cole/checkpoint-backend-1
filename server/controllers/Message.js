@@ -1,4 +1,4 @@
-let MessageModel = require("./models/Message");
+let MessageModel = require("../models/Message");
 
 module.exports.list = function list(req, res, next) {
   MessageModel.find({}).exec()

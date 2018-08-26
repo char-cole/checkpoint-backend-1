@@ -1,4 +1,4 @@
-let OrderModel = require("./models/Order");
+let OrderModel = require("../models/Order");
 
 module.exports.list = function list(req, res, next) {
   OrderModel.find({}).exec()
@@ -8,7 +8,7 @@ module.exports.list = function list(req, res, next) {
 }
 
 module.exports.create = function create(req, res, next) {
-  const newOrder = new MessageModel(req.body);
+  const newOrder = new OrderModel(req.body);
   newOrder.save()
   .then(order => {
     res.json(order);
