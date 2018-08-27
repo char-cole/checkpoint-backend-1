@@ -2,8 +2,6 @@
 let express = require("express");
 let app = express();
 let bodyParser = require("body-parser");
-let fs = require('fs')
-let fetch = require('node-fetch');
 
 // connect to routes
 let foxRoutes = require("./routes/Fox");
@@ -37,17 +35,6 @@ app.use(newTaskRoutes);
 app.use(newCommentRoutes);
 app.use(newOrderRoutes);
 app.use(newDateRoutes);
-
-// // Read data spreadsheet
-// let theData;
-// fs.readFile("server/data.csv", 'utf8', function (err, data) {
-//   // theData = data.split(/\r\n/);
-//   console.log(data);
-// })
-
-// app.get('/tickets', function(req, res, next) {
-//     res.send(theData);
-//   })
 
 app.listen(3001, (err) => {
 if (err) {
